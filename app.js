@@ -2,6 +2,10 @@ const fastify = require('fastify')({ logger: true });
 
 const nameList = ["Alice", "Bob", "Charlie"]; // Example initial data
 
+fastify.get("/",(req, res)=>{
+    return "sample api";
+});
+
 // Define POST endpoint
 fastify.post("/names", async (req, res) => {
   try {
